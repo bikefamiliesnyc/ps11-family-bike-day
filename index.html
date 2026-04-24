@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS11 Family Bike Day 2026</title>
+<meta name="description" content="A free, fun-filled day of bikes, kids & community at PS11 in Clinton Hill, Brooklyn. May 30, 2026.">
+<meta property="og:title" content="PS11 Family Bike Day 2026">
+<meta property="og:description" content="A free, fun-filled day of bikes, kids & community! May 30, 10 AM – 2 PM at PS11's Big Yard, Clinton Hill.">
+<meta property="og:type" content="website">
+<!-- REPLACE: Add your share image URL below (1200x630px recommended) -->
+<meta property="og:image" content="https://ps11familybikeday.org/images/PS11%20Family%20Bike%20Day%20May%2030%20Flyer.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #2D8B4E;
+  --green-dark: #1E6B3A;
+  --green-light: #E8F5EC;
+  --orange: #F28C28;
+  --orange-light: #FFF3E6;
+  --sky: #4AADCF;
+  --sky-light: #E6F6FB;
+  --coral: #E85D5D;
+  --yellow: #FFD23F;
+  --cream: #FFFDF7;
+  --dark: #1A2E1A;
+  --text: #2C3E2C;
+  --text-light: #5A6E5A;
+  --radius: 16px;
+  --radius-lg: 24px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Baloo 2', cursive;
+  line-height: 1.15;
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--green) 0%, var(--green-dark) 50%, #174D2B 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 80%, rgba(255,210,63,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 20%, rgba(74,173,207,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(242,140,40,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Decorative bike wheels */
+.hero-deco {
+  position: absolute;
+  border: 3px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-deco--1 { width: 300px; height: 300px; top: -80px; left: -80px; }
+.hero-deco--2 { width: 200px; height: 200px; bottom: -60px; right: -40px; }
+.hero-deco--3 { width: 140px; height: 140px; top: 30%; right: 8%; border-style: dashed; opacity: 0.5; }
+
+.hero-inner {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Placeholder logos — replace src with your own */
+.hero-logo {
+  height: 64px;
+  width: auto;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  padding: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-bike-icon {
+  font-size: 3.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  animation: pedal 3s ease-in-out infinite;
+}
+
+@keyframes pedal {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+}
+
+.hero-tagline {
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+  opacity: 0.92;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.hero-details strong {
+  font-weight: 700;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.15rem;
+}
+
+.hero-details a {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--orange);
+  color: white;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.9rem 2.4rem;
+  border-radius: 60px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(242,140,40,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(242,140,40,0.5);
+}
+
+.hero-rules-link {
+  display: block;
+  margin-top: 0.75rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+.hero-rules-link:hover {
+  color: var(--yellow);
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  fill: var(--cream);
+}
+
+/* ─── SECTION SHARED ─── */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Baloo 2', cursive;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--orange);
+  margin-bottom: 0.5rem;
+}
+
+section h2 {
+  font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+section p.intro {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+.prize-list {
+  margin-top: 1rem;
+  max-width: 640px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.prize-list li {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.prize-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+.prize-list li:nth-child(1)::before { content: '⛑️'; }
+.prize-list li:nth-child(2)::before { content: '🎓'; }
+.prize-list li:nth-child(3)::before { content: '🧥'; }
+.prize-list li:nth-child(4)::before { content: '🔧'; }
+.prize-list li:nth-child(5)::before { content: '🎫'; }
+.prize-list li:nth-child(6)::before { content: '👜'; }
+.prize-list li:nth-child(7)::before { content: '👜'; }
+.prize-list li:nth-child(8)::before { content: '🔒'; }
+.prize-list li:nth-child(9)::before { content: '📯'; }
+.prize-list li:nth-child(10)::before { content: '🚲'; }
+
+.prize-list li strong {
+  color: var(--text);
+}
+
+.prize-list li em {
+  font-size: 0.82rem;
+  color: var(--orange);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ─── WHAT TO KNOW ─── */
+.know-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.know-item {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.know-item .know-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.know-item strong {
+  display: block;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1rem;
+  color: var(--green-dark);
+  margin-bottom: 0.25rem;
+}
+
+.know-item p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ─── SECTION CTA (reusable) ─── */
+.section-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--green);
+  color: white;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(45,139,78,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 2rem;
+}
+.section-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(45,139,78,0.4);
+}
+
+/* ─── ACTIVITIES ─── */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.activity-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  border: 2px solid transparent;
+  transition: transform 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.activity-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
+}
+
+.activity-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.activity-card h3 {
+  font-size: 1.2rem;
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.activity-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+.activity-card .partner-tag {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--sky);
+  background: var(--sky-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.activity-card .partner-tag:hover {
+  background: var(--sky);
+  color: white;
+}
+
+/* ─── GIVEAWAY ─── */
+.giveaway {
+  background: linear-gradient(135deg, var(--orange-light), #FFF8EC);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  border: 2px solid rgba(242,140,40,0.15);
+}
+
+.giveaway-emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.giveaway h3 {
+  font-size: 1.6rem;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.giveaway-highlight {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+.giveaway-rules {
+  text-align: left;
+  max-width: 540px;
+  margin: 1.5rem auto 0;
+  list-style: none;
+  counter-reset: rules;
+}
+
+.giveaway-rules li {
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  counter-increment: rules;
+}
+
+.giveaway-rules li::before {
+  content: counter(rules);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--orange);
+  color: white;
+  font-family: 'Baloo 2', cursive;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── SPONSORS ─── */
+.sponsors-section {
+  text-align: center;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s;
+  width: 140px;
+}
+.sponsor-card:hover { transform: translateY(-3px); }
+
+.sponsor-logo-wrap {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  margin-bottom: 0.6rem;
+  padding: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.sponsor-card:hover .sponsor-logo-wrap {
+  border-color: var(--green);
+}
+
+/* Placeholder sponsor logos — replace src */
+.sponsor-logo-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sponsor-logo-wrap .placeholder-logo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.sponsor-card span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+/* ─── ABOUT ─── */
+.about-section {
+  background: var(--green-light);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-section p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.about-section p:last-child { margin-bottom: 0; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--dark);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 3rem 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+footer a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.footer-socials a:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.footer-org {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .hero { padding: 2.5rem 1.25rem 3.5rem; }
+  .hero-logo { height: 48px; }
+  section { padding: 3rem 1.25rem; }
+  .giveaway { padding: 2rem 1.25rem; }
+  .about-section { padding: 2rem 1.25rem; }
+  .activities-grid { grid-template-columns: 1fr; }
+  .sponsors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .sponsor-card { width: auto; }
+  .sponsor-logo-wrap { width: 75px; height: 75px; }
+}
+
+/* ─── FADE-IN ANIMATION ─── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ====== HERO ====== -->
+<header class="hero">
+  <div class="hero-deco hero-deco--1"></div>
+  <div class="hero-deco hero-deco--2"></div>
+  <div class="hero-deco hero-deco--3"></div>
+
+  <div class="hero-inner">
+    <div class="hero-badges">
+    </div>
+
+    <div class="hero-bike-icon">🚲</div>
+
+    <h1>PS11 Family Bike Day</h1>
+    <p class="hero-tagline">A free, fun-filled day of bikes, kids &amp; community!</p>
+
+    <div class="hero-details">
+      <strong>⭐ New Date ⭐ Saturday, May 30th · 10 AM – 2 PM</strong>
+      <span>PS11's Big Yard · <a href="https://www.google.com/maps/search/?api=1&query=Waverly+Ave+and+Greene+Ave+Brooklyn+NY+11238" target="_blank" rel="noopener">At the SE Corner of Waverly Ave and Greene Ave</a></span>
+    </div>
+
+    <a href="https://secure.givelively.org/event/ps-11-parent-teacher-association-inc/ps11-family-bike-day" class="hero-cta" target="_blank" rel="noopener">
+      🎟️ Register Now (It's Free!)
+    </a>
+    <a href="#giveaway" class="hero-rules-link">Woom Bike Giveaway Rules</a>
+  </div>
+
+  <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60Z"></path></svg>
+</header>
+
+<!-- ====== INTRO ====== -->
+<section class="fade-up">
+  <img src="images/ps11-logo.png" alt="PS11 Brooklyn" style="height: 80px; width: auto; display: block; margin: 0 auto 1.5rem;">
+  <div class="section-label">Join Us</div>
+  <h2>Clinton Hill's Inaugural Family Bike Party!</h2>
+  <p class="intro">Join us for an unforgettable day of riding, learning, and celebrating biking together as a community. Free activities for all ages, plus a chance to win your choice of a Woom kids bike (up to $500) just for showing up! Other great prizes include:</p>
+
+  <ul class="prize-list">
+    <li><strong>Ozmo Helmets</strong> (2) — $100 value each</li>
+    <li><strong>Eddie C Institute Bike Lessons</strong> (2) — $100 value each</li>
+    <li><strong>Cleverhood</strong> (2) — $100 value each</li>
+    <li><strong>Trek Level 1 Tune Up</strong> (2) — $100 value each</li>
+    <li><strong>Bicycle Habitat</strong> (2) — $100 Gift Cards</li>
+    <li><strong>Po Campo Whoosh Basket</strong> — $40 value</li>
+    <li><strong>Po Campo Orchard Grocery Pannier</strong> — $80 value</li>
+    <li><strong>Abus Lock</strong> — Bordo Folding Lock with Alarm — $200 value</li>
+    <li><strong>Loud Bicycle Horn for Cargo Bikes</strong> — $200 value</li>
+    <li><strong>Clip Bike</strong> (electrify your analog bike) — $399 value</li>
+  </ul>
+</section>
+
+<!-- ====== WHAT TO KNOW ====== -->
+<section class="fade-up">
+  <div class="section-label">Before You Go</div>
+  <h2>What to Know</h2>
+
+  <div class="know-grid">
+    <div class="know-item">
+      <span class="know-icon">🚲</span>
+      <strong>Free Kids' Bike Lessons</strong>
+      <p>Lessons begin on the hour at 10am, 11am, 12pm and 1pm. Sign up <a href="https://www.signupgenius.com/go/10C0C44ACA72DA2FCC07-63226753-family#/" target="_blank" rel="noopener">here</a>.</p>
+    </div>
+    <div class="know-item">
+      <span class="know-icon">⛑️</span>
+      <strong>Bring Your Own Bike and Helmet</strong>
+      <p>All kids must bring a bike and helmet to participate in lessons.</p>
+    </div>
+    <div class="know-item">
+      <span class="know-icon">🏘️</span>
+      <strong>Open to the Public</strong>
+      <p>You don't need to be a PS11 family. This is a community event and everyone is welcome!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ACTIVITIES ====== -->
+<section class="fade-up">
+  <div class="section-label">Activities</div>
+  <h2>What's Happening</h2>
+
+  <div class="activities-grid">
+    <div class="activity-card">
+      <span class="activity-icon">🎓</span>
+      <h3>Free Learn to Ride Clinic</h3>
+      <p>Expert-led lessons for kids learning to ride. All skill levels welcome, we'll have you pedaling in no time! Sign up <a href="https://www.signupgenius.com/go/10C0C44ACA72DA2FCC07-63226753-family#/" target="_blank" rel="noopener">here</a>. <strong>Kids must bring their own bike and helmet.</strong></p>
+    </div>
+
+    <div class="activity-card">
+      <span class="activity-icon">🚲</span>
+      <h3>Cargo Bike Test Rides</h3>
+      <p>Ever wondered what it's like to ride a cargo bike? Take one for a spin and see how your family rolls!</p>
+      <a class="partner-tag" href="https://www.propelbikes.com" target="_blank" rel="noopener">Propel Electric Bikes</a>
+    </div>
+
+    <div class="activity-card">
+      <span class="activity-icon">⭐</span>
+      <h3>Radio Flyer Loop</h3>
+      <p>Be among the first to test ride the all-new Radio Flyer Loop cargo bike before it hits the streets! This bike will be auctioned off at the Raise11 Gala. Try it here first.</p>
+      <a class="partner-tag" href="https://www.radioflyer.com/flyer" target="_blank" rel="noopener">Flyer by Radio Flyer</a>
+    </div>
+
+    <div class="activity-card">
+      <span class="activity-icon">🎨</span>
+      <h3>Bike Decorating</h3>
+      <p>Stickers & more. Roll up and make your helmet and bike one of a kind.</p>
+      <a class="partner-tag" href="https://www.transalt.org" target="_blank" rel="noopener">Transportation Alternatives</a>
+    </div>
+
+    <div class="activity-card">
+      <span class="activity-icon">⛑️</span>
+      <h3>Helmet Fittings</h3>
+      <p>Make sure your helmet fits right! Free professional fittings to keep every rider safe.</p>
+      <a class="partner-tag" href="https://ozmohelmets.com" target="_blank" rel="noopener">Ozmo Helmets</a>
+    </div>
+
+    <div class="activity-card">
+      <span class="activity-icon">📚</span>
+      <h3>Bike Story Time</h3>
+      <p>Bike-themed stories read aloud, perfect for our youngest community members.</p>
+      <a class="partner-tag" href="https://www.bklynlibrary.org" target="_blank" rel="noopener">Brooklyn Public Library</a>
+    </div>
+
+    <div class="activity-card">
+      <span class="activity-icon">🩺</span>
+      <h3>CPR &amp; Stop the Bleed</h3>
+      <p>Learn life-saving basics from the pros. Hands-on CPR and Stop the Bleed training for parents and kids.</p>
+      <a class="partner-tag" href="https://www.nyp.org" target="_blank" rel="noopener">NY Presbyterian</a>
+    </div>
+
+    <div class="activity-card">
+      <span class="activity-icon">🔧</span>
+      <h3>Bike Safety Check</h3>
+      <p>Dust off your bike and make sure it's safe for riding. Free inspections from the experts!</p>
+      <a class="partner-tag" href="https://bicyclehabitat.com" target="_blank" rel="noopener">Bicycle Habitat</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== FOOD ====== -->
+<section class="fade-up">
+  <div class="section-label">Fuel Up</div>
+  <h2>Food &amp; Drinks</h2>
+
+  <div class="activities-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+    <div class="activity-card" style="pointer-events: none;">
+      <img src="images/KDT_MONOGRAM_BLACK.png" alt="King David Tacos" style="height: 64px; width: auto; margin-bottom: 0.75rem;">
+      <h3>King David Tacos</h3>
+      <p>Delicious tacos to keep you fueled for the fun. Limited quantities available for purchase!</p>
+    </div>
+
+    <div class="activity-card" style="pointer-events: none;">
+      <img src="images/Kona_Ice.png" alt="Kona Ice" style="height: 64px; width: auto; margin-bottom: 0.75rem;">
+      <h3>Kona Ice</h3>
+      <p>Cool down with shave ice. Available for purchase on-site.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== GIVEAWAY ====== -->
+<section id="giveaway" class="fade-up">
+  <div class="section-label">Giveaway</div>
+  <h2>Win a Woom Bike!</h2>
+
+  <div class="giveaway">
+    <img src="images/woom-bicycles.png" alt="Woom Bicycles" style="height: 60px; margin-bottom: 0.75rem;">
+    <h3>Yes! A free Woom bike of your choice!</h3>
+    <p class="giveaway-highlight">No purchase or donation required.</p>
+
+    <ol class="giveaway-rules">
+      <li>Register for Family Bike Day on GiveLively before Friday, April 24th at 6 PM, then confirm attendance at the Giveaway Table on event day between 10 AM and 1:30 PM.</li>
+      <li>One entry for each child who attends and checks in at the Giveaway Table between 10 AM and 1:30 PM.</li>
+      <li>Additional entries can be purchased on the day of the event.</li>
+      <li>Each entry must be associated with an email address or phone number.</li>
+      <li>Winners will be contacted. If the prize is not claimed by May 1, a new winner will be selected.</li>
+    </ol>
+
+    <a href="https://secure.givelively.org/event/ps-11-parent-teacher-association-inc/ps11-family-bike-day" class="section-cta" target="_blank" rel="noopener" style="background: var(--orange); box-shadow: 0 4px 16px rgba(242,140,40,0.3);">
+      🎟️ Register &amp; Get Raffle Tickets
+    </a>
+  </div>
+</section>
+<section class="sponsors-section fade-up">
+  <div class="section-label">On Site</div>
+  <h2>Our Hosts</h2>
+
+  <div class="sponsors-grid">
+    <a class="sponsor-card" href="https://ozmohelmets.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/ozmo-helmets.png" alt="Ozmo Helmets">
+      </div>
+      <span>Ozmo Helmets</span>
+    </a>
+
+    <a class="sponsor-card" href="https://bicyclehabitat.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/bicycle-habitat.png" alt="Bicycle Habitat">
+      </div>
+      <span>Bicycle Habitat</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.propelbikes.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/propel.png" alt="Propel Electric Bikes">
+      </div>
+      <span>Propel</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.transalt.org" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/transportation-alternatives.png" alt="Transportation Alternatives">
+      </div>
+      <span>Transportation Alternatives</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.nyp.org" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/ny-presbyterian.jpg" alt="NewYork-Presbyterian">
+      </div>
+      <span>NY Presbyterian</span>
+    </a>
+
+    <a class="sponsor-card" href="https://coachrosa.nyc/" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/COACH ROSA OFFICIAL LOGO VERSION 2 BLACK.png" alt="Coach Rosa">
+      </div>
+      <span>Coach Rosa</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.bklynlibrary.org" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/brooklyn-public-library.png" alt="Brooklyn Public Library">
+      </div>
+      <span>Brooklyn Public Library</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.radioflyer.com/flyer" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/radio-flyer.png" alt="Radio Flyer">
+      </div>
+      <span>Radio Flyer</span>
+    </a>
+
+    <a class="sponsor-card" href="https://clip.bike" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/Clip Logotype_Black.png" alt="Clip Bike">
+      </div>
+      <span>Clip Bike</span>
+    </a>
+  </div>
+</section>
+
+<!-- ====== OUR PARTNERS ====== -->
+<section class="sponsors-section fade-up">
+  <div class="section-label">Thank You</div>
+  <h2>Our Partners</h2>
+
+  <div class="sponsors-grid">
+    <a class="sponsor-card" href="https://ecbikeinstitute.weebly.com/" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/eddie-c-bike-institute.jpg" alt="Eddie C Bike Institute">
+      </div>
+      <span>Eddie C Bike Institute</span>
+    </a>
+
+    <a class="sponsor-card" href="https://woom.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/woom-bicycles.png" alt="Woom Bicycles">
+      </div>
+      <span>Woom Bicycles</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.trekbikes.com/us/en_US/retail/cobble_hill/" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/Trek_logo_location_Cobble_Hill_black.png" alt="Trek Bikes">
+      </div>
+      <span>Trek Bikes</span>
+    </a>
+
+    <a class="sponsor-card" href="https://pocampo.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/po-campo.png" alt="Po Campo">
+      </div>
+      <span>Po Campo</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.cleverhood.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/cleverhood.png" alt="Cleverhood">
+      </div>
+      <span>Cleverhood</span>
+    </a>
+
+    <a class="sponsor-card" href="https://www.abus.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/abus-locks.svg" alt="Abus Locks">
+      </div>
+      <span>Abus Locks</span>
+    </a>
+
+    <a class="sponsor-card" href="https://loudbicycle.com" target="_blank" rel="noopener">
+      <div class="sponsor-logo-wrap">
+        <img src="images/loud-bicycle.svg" alt="Loud Bicycle">
+      </div>
+      <span>Loud Bicycle</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="fade-up">
+  <div class="about-section">
+    <h2>About This Event</h2>
+    <p>PS11 Family Bike Day is organized by <strong>Bike Families NYC</strong> and the <strong>PS11 PTA</strong> to celebrate biking as a way to build healthier, happier, more connected communities. PS11 (The Purvis J. Behan School) is a beloved public elementary school in the heart of Clinton Hill, Brooklyn.</p>
+    <p>Bike Families NYC brings together families across Brooklyn to ride, advocate, and build community through cycling.</p>
+    <p><strong>Questions?</strong> DM us on Instagram at <a href="https://www.instagram.com/bikefamiliesnyc/" target="_blank" rel="noopener" style="color: var(--green); font-weight: 700;">@bikefamiliesnyc</a></p>
+  </div>
+  <img src="images/ps11-logo.png" alt="PS11 Brooklyn" style="height: 80px; width: auto; display: block; margin: 2rem auto 0;">
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <p>PS11 Family Bike Day 2026</p>
+  <p>Organized by Bike Families NYC &amp; <a href="#">PS11 Brooklyn</a></p>
+
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/bikefamiliesnyc/" target="_blank" rel="noopener">📸 @bikefamiliesnyc</a>
+    <a href="https://www.instagram.com/ps11brooklyn/" target="_blank" rel="noopener">📸 PS11 Brooklyn PTA</a>
+  </div>
+
+  <p class="footer-org">PS11 PTA · A 501(c)(3) Public Charity</p>
+</footer>
+
+<!-- ====== SCROLL ANIMATION ====== -->
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
